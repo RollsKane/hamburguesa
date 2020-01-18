@@ -227,6 +227,8 @@ main section .underline span {
 
 /** MENU LIST **/
 
+
+
 main .menulist {
     padding-top: 10px;
 }
@@ -282,6 +284,17 @@ main div section .titlelittle p{
 
 /* Articles */
 
+main .flex {
+    display: flex;
+    flex-wrap: wrap;
+    /* Ponemos el wrap para que ajustemos como movemos los elementos */
+    /* si el flex-wrap es no wrap, todos los elementos se ajustarían al dispositivo de manera automática */
+}
+
+main .flex article {
+    width: 100%;
+}
+
 main div section h3{
     padding: 20px 0;
     font-weight: bold;
@@ -289,9 +302,13 @@ main div section h3{
 
 main div section p strong{
     padding: 20px;
+    position: absolute;
     color: #fa573a;
     font-weight: bold;
     float: right;
+    /*margin-left: 80%;
+    margin-top: 2.5%;*/
+    margin: 2.5% 80%;
     
 }
 
@@ -401,12 +418,27 @@ footer a {
 
 @media(min-width: 75.0625em)
 {
- .container01{
-     width:30%;
-     display: inline-block;
- }
- .container02{
-    width:20%;
-    display: inline-block;
+
+   .container01{
+       width: 40%;
+       display:inline-block;
+   }
+    .container02{
+        width: 50%;
+        display: inline-block;
+    }
+
+    .container02 article img{
+
+    display: inline;
+    width: 50%;
 }
+
+main .container02 .art{
+
+    display: inline;
+    width: 20%;
 }
+    
+}
+
