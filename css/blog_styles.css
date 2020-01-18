@@ -235,11 +235,73 @@ main div .phot .square{
     text-align: center;
 }
 
+main div .phot .square:hover{
+
+    background-color: #fa573a;
+
+}
+
 main div .phot .square div{
     padding: 2%;
 }
 
+/***************************************/
 
+main .flex article {
+    width: 100%;
+    display: block;
+}
+
+main .flex article  a{
+    text-decoration: none;
+    color: black;
+
+}
+
+main .flex .art h3{
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.art p strong{
+    padding: 0 20px;
+    color: #fa573a;
+    font-weight: bold;
+
+    
+}
+
+.art p{
+    padding-bottom: 20px;
+    
+}
+
+/* Botón */
+
+.art .boton {
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    padding: 1.15em;
+    margin: 1em 0;
+    color: #fa573a;
+    border: 1px transparent #fa573a;
+    transition: 1s;
+    background-color: transparent;
+
+}
+
+.art .boton:hover {
+    color: white;
+    background-color:#fa573a;
+
+}
+
+.art .boton:hover i {
+    transform: translateX(5px);
+    transition: transform 1s;
+    /* Podemos elegir a qué reglas en concreto afecta el transition */
+}
 
 
 
@@ -315,5 +377,16 @@ footer a {
 
 @media(min-width: 75.0625em)
 {
+main .flex{
+    width:100%;
+    position: relative;
+}
+main .flex .container article{
+    padding: 1%;
+    display: inline-block;
+    width:48%;
+}
 
+
+    
 }
