@@ -181,6 +181,7 @@ header nav .menu li a.activo, header nav .menu li a:hover {
 
 main {
     background-color: rgb(36, 35, 35);
+    color: white;
 }
 
 main section.container {
@@ -250,24 +251,84 @@ main .menulist li a {
 /************************************/
 /* Little Title - Today´s Crazy Offers*/
 
-main div.container01 section div.menulist{
-    padding-top: 30px;
-    color: white;
-
+main{
+    padding: 30px;
+}
+main div section .titlelittle{
+    padding-top: 100px;
 }
 
-main div.container01 section div.menulist h2{
+main div section .titlelittle h2{
     font-weight: 700;
+    color: white;
 }
 
-main div.container01 section div.menulist hr{
+main div section .titlelittle hr{
     border-color: #fa573a;
-    position: absolute;
-    /* Al poner algo en posición absoluta, sale de su contenedor, por lo que necesitamos una medida para que aparezca */
-    width: 100%;
+    /*position: absolute;/*
+     /*Al poner algo en posición absoluta, sale de su contenedor, por lo que necesitamos una medida para que aparezca*/
+    width: 20%;
     top: -1px;
+    margin-left: 0;
 }
 
+main div section .titlelittle p{
+    padding: 4px;
+}
+
+
+/************************************/
+/************************************/
+
+/* Articles */
+
+main div section h3{
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+main div section p strong{
+    padding: 20px;
+    color: #fa573a;
+    font-weight: bold;
+    float: right;
+    
+}
+
+main div section p{
+    padding-bottom: 20px;
+    
+}
+
+/* Botón */
+
+main div section .boton {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1.15em;
+    margin: 1em 0;
+    color: #fa573a;
+    border: 1px transparent #fa573a;
+    transition: 1s;
+    background-color: transparent;
+
+}
+
+main div section .boton:hover {
+    color: white;
+    background-color:#fa573a;
+
+}
+
+main div section .boton:hover i {
+    transform: translateX(5px);
+    transition: transform 1s;
+    /* Podemos elegir a qué reglas en concreto afecta el transition */
+}
+
+main div section img{
+    margin: 20px 0;
+}
 
 
 /*************************************/
@@ -340,5 +401,12 @@ footer a {
 
 @media(min-width: 75.0625em)
 {
-
+ .container01{
+     width:30%;
+     display: inline-block;
+ }
+ .container02{
+    width:20%;
+    display: inline-block;
+}
 }
