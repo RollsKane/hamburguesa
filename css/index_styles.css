@@ -1,0 +1,535 @@
+/* CÓDIGO BÁSICO */
+
+
+/* Cargando reset */
+
+@import url(reset.css);
+
+/* Cargando fuentes */
+
+@import url('https://fonts.googleapis.com/css?family=Handlee|Montserrat:400,700&display=swap');
+
+/* FUENTES */
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Handlee', cursive;
+font-family: 'Freehand', cursive;
+/*
+
+/* COLORES */
+/*
+color rojo: #fa573a;
+color azul: #21242e;
+*/
+
+/*************************************/
+
+/* Box Sizing reset */
+
+
+*{
+    box-sizing: border-box;
+}
+
+/* Declarando fuente */
+
+body {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-size: 1em;
+}
+
+/*************************************/
+
+
+/* FLOTACIONES */
+
+/* Siempre que vayamos a realizar flotaciones, debemos marcar al contenedor de dichas flotaciones con un row:after */
+/* row:after hace una barrera después (por eso after) para que las flotaciones no se salgan de ese contenedor */
+
+.row:after {
+    clear: both;
+    content: "";
+    height: 0;
+    display: block;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*************************************/
+/*************************************/
+
+/* ESTILOS DE ELEMENTOS DE LA PÁGINA */
+
+
+
+
+/**************************************************************************/
+/*********************** Barra gris - Inicio Header ***********************/
+/**************************************************************************/
+
+
+
+/************ Container y Container fluid ************/
+/* Container fluid llega al 100% del ancho del dispositivo */
+/* Container sirve para realizar el encorsetado */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 3%;
+}
+
+.container-fluid {
+    width: 100%;
+}
+
+header .nav_top {
+    background-color: #21242e;
+    color: white;
+    padding: 20px 0;
+}
+
+header .nav_top .container div {
+    float: left;
+    width: 25%;
+}
+
+header .nav_top .container div a {
+    color: white;
+    text-decoration: none; /* text-decoration: none ---> para resetear estilo */
+    font-size: 150%;
+}
+
+header .nav_top a span {
+    display: none;
+}
+
+header .nav_top a i {
+    color: #fa573a;
+}
+
+header .nav_top .container div:nth-child(3), header .nav_top .container div:last-child {
+    text-align: right;
+}
+
+
+/*************************************/
+
+/* Inicio Nav */
+
+header nav {
+    padding: 20px 3%;
+    
+}
+
+header .hamburguesa {
+    cursor: pointer;
+    float: right;
+}
+
+header .hamburguesa div {
+    border-top: 2px solid #aaa;
+    width: 1.875em;
+    /* me separo con margin, me doy aire con padding */
+    margin-bottom: 0.625em;
+    }
+
+header nav .logo {
+    width: 100px;
+    float: left;
+
+}
+
+header nav .menu {
+    padding-top: 70px;
+}
+
+header nav .menu li {
+    padding: 1.250em;
+    text-align: center;
+    border-bottom: 1px solid #aaa; 
+}
+
+header nav .menu li:last-child {
+/* Sobreescribimos la regla anterior para quitar la línea al last child */
+border: 0px;
+}
+
+header nav .menu li a {
+    text-decoration: none;
+    color: #aaa;
+    display:block;
+}
+
+
+header nav .menu li a.activo, header nav .menu li a:hover {
+    color: #fa573a;
+}
+
+/*************************************/
+
+
+/* Inicio Heroe */
+
+.hero {
+    background-image: url(../img/fondo.jpg);
+    height: 37em;
+    background-size: cover;
+    background-position: center center;
+    background-color: #666;
+    background-blend-mode: multiply;
+}
+
+.sealcont {
+
+    position: relative;
+    width:100%
+}
+.seal {
+    float: right;
+    margin-left: 200px;
+
+}
+
+.hero>div {
+    color: white;
+    padding: 15% 3%;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    font-family: 'Handlee', cursive;
+}
+
+.hero h2 {
+    color: #fa573a;
+    font-size: 1.25em;
+    margin: 1em;
+}
+
+.hero p {
+    font-size: 1.15em;
+}
+
+
+
+/* Botón */
+
+.boton {
+    background-color:#fa573a;
+    display: inline-block;
+    padding: 1.15em;
+    margin: 1em 0;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #fa573a;
+    transition: 1s;
+}
+
+.boton:hover {
+    background-color: transparent;
+    color: #fa573a;
+}
+
+.boton:hover i {
+    transform: translateX(5px);
+    transition: transform 1s;
+    /* Podemos elegir a qué reglas en concreto afecta el transition */
+}
+
+
+/* Social */
+
+.hero .social li {
+    display: inline-block;
+    font-size: 2em;
+    margin-right: 1em;
+}
+
+.hero .social li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero .social li:hover a {
+    color:#fa573a;
+    text-decoration: none;
+    transition: 1s;
+}
+
+
+
+/*************************************/
+/*************************************/
+
+/* Main */
+
+main section.container {
+    padding: 50px 3%;
+}
+
+main section h2 {
+    color: black;
+    font-family: 'handlee', cursive;
+    font-size: 200%;
+    text-align: center;
+}
+
+main section h2 span {
+    color: #fa573a;
+}
+
+
+/* Linea con la X */
+
+main section .underline {
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
+}
+
+main section .underline hr {
+    border-color: #fa573a;
+    position: absolute;
+    /* Al poner algo en posición absoluta, sale de su contenedor, por lo que necesitamos una medida para que aparezca */
+    width: 100%;
+    top: -1px;
+}
+
+main section .underline span {
+    display: block;
+    text-align: center;
+    color: #fa573a;
+    font-weight: 700;
+}
+
+/*************************************/
+
+
+/* Articles con Flex */
+
+main section .flex {
+    display: flex;
+    flex-wrap: wrap;
+    /* Ponemos el wrap para que ajustemos como movemos los elementos */
+    /* si el flex-wrap es no wrap, todos los elementos se ajustarían al dispositivo de manera automática */
+}
+
+main section .flex article {
+    width: 100%;
+    padding: 1.825em 0;
+    border-bottom: 1px solid #aaa;
+    
+
+}
+
+main section .flex article:last-child {
+    border-bottom: 0px;
+}
+
+main section article div i {
+    color: #fa573a;
+    font-size: 2em;
+    border: 2px solid #fa573a;
+    padding: .8rem;
+}
+
+main section article div .fa-truck {
+    transform: rotateY(180deg);
+}
+
+
+/*************************************/
+/* Articulos */
+
+main section article h3 {
+    font-weight: 700;
+    margin: 1em 0;
+}
+
+main section article .enlace {
+    text-decoration: none;
+    font-weight: 700;
+    color: #fa573a;
+}
+
+main section article .enlace i {
+    transition: .5s;
+    margin: 1em 0;
+}
+
+main section article .enlace:hover i {
+    transform: translateX(20px) rotateZ(360deg);
+}
+
+/*************************************/
+
+/*  Sección de abajo */
+
+main section .columna {
+    width: 100%;
+    padding: 1.25em 0;
+}
+
+main section .image {
+    width: 85%;
+    margin: 0 auto;
+}
+
+main section .imagen .marco {
+    border: 3px solid #fa573a;
+    background-color: transparent;
+    transform: rotateZ(10deg);
+    transition: 1s;
+}
+
+main section .imagen .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main section .imagen:hover .marco, main section .imagen:hover img {
+    transform: rotateZ(0deg);
+}
+
+main section .columna h3 {
+    color: black;
+    font-weight: 700;
+    font-size: 110%;
+    margin: 20px 0;
+}
+
+main section .columna h4 {
+    color: #fa573a;
+    margin: 10px;
+}
+
+main section .columna p {
+    margin: 20px;
+}
+
+
+/*************************************/
+/* Copyright */
+
+footer {
+
+    background-color: #21242e;
+    padding: 1.825em 0;
+}
+
+footer p {
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/*******************************************************/
+/*********************MEDIA QUERIES*********************/
+/*******************************************************/
+
+
+/* Esta web está hecha en mobile-first */
+
+
+/* Primer Breakpoint */
+/* Mobil grande / Tablet pequeña */
+
+@media(min-width: 48.063em)
+{
+    header .nav_top a span {
+        display: inline;
+        font-size: 50%;
+    }
+
+    .seal {
+        width: 20%
+    }
+
+    main section .flex article {
+            width: 50%;
+            padding: 1.825em 1em;
+            border-bottom: 0px ;
+            border-left: 1px solid #aaa;
+            margin-bottom: 1em;
+
+    }
+
+    
+        main section .flex article:last-child {
+        width: 100%;
+    }
+
+    main section .underline {
+        margin-bottom: 2em;
+    }
+   
+}
+
+/* Segundo Breakpoint */
+/* Tablet / Pantalla Pequeña */
+
+@media(min-width: 62.750em)
+{
+    header .hamburguesa {
+        display: none;
+        float: none;
+    }
+
+    header nav .menu {
+        float: right;
+    }
+
+    header nav .menu li {
+        display: inline-block;
+        padding: 0.5em 1.250em;
+        text-align: left;
+        border-bottom: 0px; 
+    }
+
+    header nav .menu:last-child {
+        padding: 0;
+    }
+
+    .seal {
+        width: 20%
+    }
+
+    main section .columna {
+        width: 50%;
+        padding: 1.25em 1em;
+    }
+
+}
+
+
+/* Tercer Breakpoint */
+
+@media(min-width: 75.0625em)
+{
+    .seal {
+        width: 20%
+    }
+    main section .flex article {
+        width: 33.33%;
+    }
+    main section .flex article:last-child {
+        width: 33.33%;
+    }
+
+    .hero>div {
+        padding: 7% 3%;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+}
