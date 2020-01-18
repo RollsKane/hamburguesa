@@ -218,6 +218,32 @@ main section .underline span {
 }
 
 /*************************************/
+/*************************************/
+
+/** Fotos de Blogs */
+main div .phot{
+    position: relative;
+}
+
+main div .phot .square{
+    position: absolute;
+    margin: 0;
+    padding: 20px;
+    font-weight: 700;
+    background-color: #fa573a95;
+    color: white;
+    text-align: center;
+}
+
+main div .phot .square div{
+    padding: 2%;
+}
+
+
+
+
+
+/*************************************/
 
 /*************************************/
 /* Copyright */
