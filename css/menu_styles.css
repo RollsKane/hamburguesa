@@ -345,8 +345,19 @@ main div section .boton:hover i {
 
 main div section img{
     margin: 20px 0;
+
 }
 
+/*
+main article img{
+
+}
+
+main article img:hover{
+    scale: 0.5%;
+    transition:2s;
+}
+*/
 
 /*************************************/
 /* Copyright */

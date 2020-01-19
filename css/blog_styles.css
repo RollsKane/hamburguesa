@@ -244,7 +244,16 @@ main div .phot .square:hover{
 main div .phot .square div{
     padding: 2%;
 }
+/*
+main .container article a div{
+    transition: 2s;
+}
 
+main .container article a div:hover{
+    scale: 200%;
+    transition: 2s;
+}
+*/
 /***************************************/
 
 main .flex article {
