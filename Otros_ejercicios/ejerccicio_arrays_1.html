@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        ul {
+            display: flex;
+            border: 3px solid green;
+            list-style: none;
+
+            /* wrap hace que el contenedor envuelva su contenido */
+
+        }
+
+        li {
+
+            text-align: center;
+            display: inline-block;
+
+            border: 1px solid red;
+            width: 20%;
+            height: 50px;
+
+        }
+
+        li:hover {
+            background: red;
+
+        }
+
+        li a {
+
+            color: black;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: yellow;
+            size: 2%;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <script>
+
+        // crear una lista de secciones de una web de la cantidad de elementos que vosotros querais
+
+        var lista = new Array('Home', 'Peliculas', 'Videojuegos', 'Noticias', 'About');
+
+        // pintar la lista en un nav de HTML formado por el texto de la sección y el enlace será la sección.html
+
+
+
+        //ejemplo
+        //(home, servicios, contacto, galeria)
+        //<li><a href="home.html">home</a></li>
+
+        //maquetar menu con estilos CSS
+
+        // function pintarMenu() {
+        document.write('<nav><ul>')
+        for (enlaces of lista) {
+            document.write('<li><a href="' + enlaces + '.html">' + enlaces + '</a></li>');
+
+            //            }
+            document.write('</ul></nav>')
+        }
+
+    </script>
+
+</body>
+
+</html>

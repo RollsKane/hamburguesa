@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicios LET</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        // Realizar dos funciones
+        // una que me calcule la potencia de dos números (mandando dos números, el primero es el número, el segundo es la potencia)
+
+        // una función que pinte en el documento el valor de la potencia
+
+
+
+        var numero = parseInt(prompt('Dame un número'));
+        var potencia = parseInt(prompt('Dame su potencia'));
+
+
+        function funcPotencia(pNumero, pPotencia) {
+
+            var multiplicacion = pNumero ** pPotencia;
+            return multiplicacion;
+
+        }
+
+        var resultado = funcPotencia(numero, potencia);
+
+
+        function pintarPantalla(pValor) {
+            document.write('El número ' + numero + ' elevado a ' + potencia + ' es ' + pValor);
+        }
+
+        var resultadoFinal = pintarPantalla(resultado);
+
+
+
+    </script>
+</body>
+
+</html>

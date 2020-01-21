@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+        //quiero pintar un tablero de ajedrez, dicho tablero tendrá el número de casillas que decida el usuario por pantalla, podré elegir también el tamaño de la casilla
+
+
+        var casillas = parseInt(prompt('Dime el número de casillas'));
+
+        while (isNaN(casillas)) {
+
+            casillas = parseInt(prompt('Solo puedes introducir números. Dime el número de casillas'));
+        }
+
+        var size = parseInt(prompt('Dime el tamaño de la casilla'));
+
+        while (isNaN(size)) {
+
+            size = parseInt(prompt('Solo puedes introducir números. Dime el número de casillas'));
+        }
+
+
+
+
+
+
+
+
+        function crearFila(pAnchoCasilla, pNumeroCasillas, pColorInicio) {
+
+            let anchoFila = pAnchoCasilla * pNumeroCasillas;
+
+            let fila = '<div style="width: ' + anchoFila + 'px; display: flex;">';
+
+            for (let i = 1; i <= pNumeroCasillas; i++) {
+
+                let color = '';
+
+                if (pColorInicio == '#999') {
+                    color = (i % 2 == 0) ? 'black' : '#999';
+                } else {
+
+                    color = (i % 2 == 0) ? '#999' : 'black';
+                }
+
+                fila += '<div style="background-color: ' + color + '; width:' + pAnchoCasilla + 'px; height:' + pAnchoCasilla + 'px;"></div>';
+            }
+
+            fila += '</div>';
+
+            document.write(fila);
+        }
+
+
+
+        function crearTablero(pNumeroCasillas, pTamano) {
+
+            for (let i = 1; i < pNumeroCasillas; i++) {
+
+                let colorInicial = (i % 2 == 0) ? 'black' : '#999';
+                crearFila(pTamano, pNumeroCasillas, colorInicial);
+            }
+
+
+        }
+
+        /*
+                crearFila(size, casillas, 'orangered');
+                crearFila(size, casillas, 'orange');
+        */
+
+        crearTablero(casillas, size);
+
+
+    </script>
+</body>
+
+</html>

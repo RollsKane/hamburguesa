@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 5</title>
+
+    <style>
+        * {
+            margin: 0 auto;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+
+    <script>
+
+        // Quiero una funcion que me permita pintar cuadrados o circulos
+        // Puedo elegir el color y el tamaño, y también la cantidad
+        // Quiero poder pintarlos en horizontal y vertical
+
+        // como vamos a probar que mi ejercicio funciona
+        // voy a ejecutar en consola la funcion crearFigura('cuadrado','rojo','100', '10','horizontal') -> CUIDADO, horizontal no es obligatorio
+
+        var circuloCuadrado = prompt('¿Qué tipo de polígono quieres?');
+
+        while (circuloCuadrado != 'cuadrado' && circuloCuadrado != 'circulo') {
+            circuloCuadrado = prompt('Solo se pueden elegir cuadrado y circulo. ¿Qué tipo de polígono quieres?')
+        }
+
+        var size = parseInt(prompt('¿Qué tamaño tiene?'));
+
+        while (isNaN(size)) {
+            size = parseInt(prompt('¡Solo se pueden números! ¿Qué tamaño tiene?'));
+        }
+        var color = prompt('¿Qué color quieres?');
+
+        var cantidad = parseInt(prompt('¿Qué cantidad quieres?'));;
+
+        while (isNaN(size)) {
+            size = parseInt(prompt('¡Solo se pueden números! ¿Qué cantidad quieres?'));
+        }
+
+
+        var horizontalVertical = prompt('¿Vertical u Horizontal?');
+
+
+
+
+        function crearFigura(pPoligono, pSize, pColor, pCantidad, pPosition = 'horizontal') {
+
+            var position = 'block';
+
+            if (pPoligono == 'cuadrado') {
+                circuloCuadrado = 0;
+            } else {
+                circuloCuadrado = 50;
+            }
+
+
+            if (pPosition == 'horizontal') {
+                position = 'Inline-block';
+            } else {
+                position = 'Block';
+            }
+
+            for (var i = 1; i <= pCantidad; i++) {
+                document.write('<div style="background-color: ' + pColor + '; width: ' + pSize + 'px; height: ' + pSize + 'px; border-radius: ' + circuloCuadrado + '%; display: ' + position + ';"></div>')
+            }
+
+            /*
+            for (var i = 1; i <= pCantidad; i++) {
+                document.write('<div style="background-color: ' + pColor + '; width: ' + pSize + 'px; height: ' + pSize + 'px; border-radius: ' + circuloCuadrado + '%; padding: 40px; display: ' + position + '; margin: 10px;</div>')
+            }
+            */
+
+
+        }
+
+
+        crearFigura(circuloCuadrado, size, color, cantidad, horizontalVertical);
+
+
+
+    </script>
+</body>
+
+</html>
